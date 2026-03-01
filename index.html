@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ramadan Spin 🌙🪔</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+  <div class="stars"></div>
+  
+  <header class="header">
+    <div class="moon-lantern">🌙 Ramadan Spin 🪔</div>
+    <h1>Plan & Spin Your Blessed Iftar</h1>
+    <p class="subtitle">Save your menu ideas, spin daily for surprises! 🎡</p>
+  </header>
+
+  <main>
+    <section class="plan-section">
+      <h3>📝 Your Ramadan Menu Ideas</h3>
+      <label for="plans">Enter each dish with ingredients (one per line):</label>
+      <textarea id="plans" rows="10" placeholder="Example: Chicken Biryani - Rice, Chicken, Yogurt, Spices&#10;Dates & Milk&#10;Samosas - Flour, Potatoes, Peas&#10;..."></textarea>
+
+      <input type="tel" id="phone" placeholder="📱 WhatsApp number (e.g. +923001234567)" />
+
+      <button id="generate-btn" class="btn-primary">✨ Generate PDF & Unlock Wheel</button>
+      <button id="load-btn" class="btn-secondary" style="display: none;">📂 Load From PDF</button>
+      
+      <div id="success-msg" style="display: none; margin-top: 20px; padding: 15px; background: rgba(0,200,100,0.3); border-left: 4px solid #00c864; border-radius: 8px; color: #00ff77;">
+        ✓ Menu saved successfully!
+      </div>
+    </section>
+
+    <section id="wheel-section" style="display: none;" class="wheel-section">
+      <h2>🎡 Spin for Today's Unique Menu!</h2>
+      <p id="daily-status" style="color: var(--gold); font-size: 1.2rem; margin: 15px 0;"></p>
+      <div class="wheel-wrapper">
+        <canvas id="wheel" width="500" height="500"></canvas>
+        <div class="wheel-pointer"></div>
+        <button id="spin-btn" class="btn-spin">SPIN 🌀</button>
+      </div>
+      <div id="result-box" style="display: none; margin-top: 30px; padding: 20px; background: rgba(255,215,0,0.15); border: 2px solid var(--gold); border-radius: 12px; animation: slideUp 0.5s ease;">
+        <h3 style="color: var(--gold); margin-bottom: 10px;">Today's Menu 🍽️</h3>
+        <p id="today-menu" style="font-size: 1.3rem; color: #fff;"></p>
+        <p id="today-ingredients" style="font-size: 0.95rem; color: var(--light-gold); margin-top: 10px;"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Ramadan Mubarak from Karachi • Made with ❤️</footer>
+</body>
+</html>
